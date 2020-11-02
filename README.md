@@ -39,7 +39,10 @@ To install this package into a project:
 
 ## Testing 
 Automated Unit Test built using [React Utils](https://reactjs.org/docs/test-utils.html) and [Jest Enzyme](https://enzymejs.github.io/enzyme/docs/installation/)
-### Future Work
+
+## Future Work
+
+Multi player functionality and difficulty levels coming soon.
 
 
 

@@ -4,7 +4,7 @@
 
 ## Overview
 The goal is to create an application that others will be able to use in order to help improve their trivia skills.
-The React application is written using ES9(2019) and hosted via heroku [here](http://tandem-assesment.herokuapp.com/).
+The React application is written using ES6 and hosted via heroku [here](http://tandem-assesment.herokuapp.com/).
 
 ## Results
 ![](src/Screenshots/Start.png)
@@ -37,7 +37,8 @@ To install this package into a project:
     npm run 
     ```  
 
-
+## Testing 
+Automated Unit Test built using [React Utils](https://reactjs.org/docs/test-utils.html) and [Jest Enzyme](https://enzymejs.github.io/enzyme/docs/installation/)
 ### Future Work
 
 

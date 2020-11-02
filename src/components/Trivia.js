@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import {questions} from './Questions'
 import Finish from './Finish'
-import Countdown from 'react-countdown';
-import PropTypes from 'prop-types'; // Type Checking
+import Countdown from 'react-countdown'
+import PropTypes from 'prop-types' // Type Checking
 
 class Trivia extends Component {
     btn = React.createRef();

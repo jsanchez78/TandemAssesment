@@ -40,8 +40,8 @@ class Trivia extends Component {
           })
       }
 
-      checkAnswer(q) {
-        let currentAnswer = this.state.questions[this.state.index].correct_answer
+      checkAnswer(q, a) {
+        let currentAnswer = a       // onClick calls this function which passes in the current answer into the function to update score
         let score = this.state.score
         if (q.target.innerText === currentAnswer) {
            score++
@@ -67,7 +67,7 @@ class Trivia extends Component {
         if (this.state.index < this.state.questions.length - 1) {
             return <button className="next-button" onClick={ event => this.nextQuestion()} >Next</button>
         }else {
-            return <button onClick={ event => this.finish()} className="next-button">Finish</button>
+            return <button onClick={this.finish()} className="next-button">Finish</button>
         }
     }
 
@@ -77,7 +77,6 @@ class Trivia extends Component {
         const currentQuestion = questions[index]
         // Append correct answer from JSON
         const answers = [currentQuestion.correct].concat(currentQuestion.incorrect).sort();
-
         if (finish === false) {
             return (
                 <div className="quiz-page">
@@ -105,7 +104,7 @@ class Trivia extends Component {
                             disabled={this.state.disabled} 
                             ref="btn" key={i} id={"answer" + i} 
                             className={`${ q ===  currentQuestion.correct ? correct : incorrect } answer-button__default animated slideInRight`} 
-                            onClick={ (event) => this.checkAnswer(event)}>
+                            onClick={ (event) => this.checkAnswer(event, currentQuestion.correct)}>
                                 {q}
                             </button>
                         ))
